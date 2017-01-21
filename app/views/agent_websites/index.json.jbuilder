@@ -1,0 +1,1 @@
+json.array! @agent_websites, partial: 'agent_websites/agent_website', as: :agent_website

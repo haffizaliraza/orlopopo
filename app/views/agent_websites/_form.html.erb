@@ -1,0 +1,57 @@
+<%= form_for(agent_website) do |f| %>
+  <% if agent_website.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agent_website.errors.count, "error") %> prohibited this agent_website from being saved:</h2>
+
+      <ul>
+      <% agent_website.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="row">
+    <div class="col-sm-4">
+
+<form>
+
+  <div class="field">
+    <%= f.label :website_link %>
+    <%= f.text_field :website_link, class:"form-control" ,placeholder:"http://yoursite.com"%>
+  </div>
+
+<div class="form-group">
+     <small id="passwordHelpInline" class="text-muted">
+      Must be 8-20 characters long.
+    </small>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class:"btn btn-primary"%>
+  </div>
+
+
+
+<!--   <div class="form-group">
+    <label for="formGroupExampleInput">Example label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  </div>
+ -->  
+
+    <!-- <div class="form-group">
+    <label for="formGroupExampleInput2">Another label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+     <small id="passwordHelpInline" class="text-muted">
+      Must be 8-20 characters long.
+    </small>
+  </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+
+    -->
+</form>  
+  </div>
+</div>
+<% end %>
+

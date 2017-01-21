@@ -1,0 +1,27 @@
+<%= form_for(website_link) do |f| %>
+  <% if website_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(website_link.errors.count, "error") %> prohibited this website_link from being saved:</h2>
+
+      <ul>
+      <% website_link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </div>
+
+  <div class="field">
+    <%= f.label :link %>
+    <%= f.text_area :link %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

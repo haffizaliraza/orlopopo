@@ -1,0 +1,78 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img  width="27px" alt="Brand" src="http://market.designmodo.com/wp-content/uploads/2015/06/flat-ui-logo.png">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <p class="navbar-text">Signed in as Mark Otto</p>
+
+        <button type="button" class="btn btn-default navbar-btn">Log Out</button>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<h1>Users Profiles </h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>session</th>
+      <th>visit</th>
+      <th>expire</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @showoff.each do |user| %>
+      <tr>
+        <td><%= user.session %></td>
+        <td><%= user.visit %></td>
+        <td><%= user.expire %></td>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%=@trans%></p> 
+<br>
+
+<p><%=@major_obj%></p>
+
+
+<h1>Frequent item sets</h1>
+
+<p><%=@frequent_item_sets%></p> 
+
+
+<br>
+
+
+<h1>Rules</h1>
+
+<%@association_rules.each do |open|%>
+
+<p><%=open.lhs%> ====>> <%=open.rhs%>
+<%end%> 
+
+<br>  

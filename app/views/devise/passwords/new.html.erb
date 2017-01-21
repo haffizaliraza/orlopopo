@@ -1,0 +1,25 @@
+
+
+<div class="logo">
+    
+  </div>
+
+<%= bootstrap_devise_error_messages! %>
+
+<div class="panel login-block">
+     <h4><%= t('.forgot_your_password', :default => 'Forgot your password?') %></h4>
+ 
+  <div class="panel-body">
+    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, role: "form" }) do |f| %> 
+        
+
+        <%= f.email_field :email, autofocus: true, placeholder:"Email" ,id: "username"  %>
+      
+      <%= f.submit t('.send_me_reset_password_instructions', :default => "Send me reset"), class: "login-block-button" %>
+    <% end %>
+<%= render "devise/shared/links" %>
+
+  </div>
+
+  
+</div>

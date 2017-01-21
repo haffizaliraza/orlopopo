@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Website Links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Website</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @website_links.each do |website_link| %>
+      <tr>
+        <td><%= website_link.website %></td>
+        <td><%= website_link.link %></td>
+        <td><%= link_to 'Show', website_link %></td>
+        <td><%= link_to 'Edit', edit_website_link_path(website_link) %></td>
+        <td><%= link_to 'Destroy', website_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Website Link', new_website_link_path %>

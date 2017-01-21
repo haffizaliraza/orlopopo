@@ -1,0 +1,1 @@
+json.array! @arr, partial: 'dummies/dummy', as: :dummy

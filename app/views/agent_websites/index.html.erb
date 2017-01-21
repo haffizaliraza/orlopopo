@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agent Websites</h1>
+
+
+<%= link_to 'New Agent Website', new_agent_website_path, class:"btn btn-warning glyphicon glyphicon-new-window"  %>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Website link</th>
+      <th>Website api key</th>
+      <th>Agent</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agent_websites.each do |agent_website| %>
+      <tr>
+        <td><%= agent_website.website_link %></td>
+        <td><%= agent_website.website_api_key %></td>
+        <td><%= agent_website.agent.first_name %></td>
+
+        <td><%= link_to ' Regenerate', agent_website , class:"btn btn-success glyphicon glyphicon-refresh"%></td>
+        <td><%= link_to ' Edit', edit_agent_website_path(agent_website), class:"btn btn-warning glyphicon glyphicon-new-window" %></td>
+        <td><%= link_to ' Destroy', agent_website,class:"btn btn-danger glyphicon glyphicon-remove", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= @agent %>

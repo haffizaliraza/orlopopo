@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>welcome</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'index', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%if signed_in? %>
+      <%= link_to 'Logout' , destroy_agent_session_path , method: :delete %>
+  <% end %>
+
+    <%= yield %>
+    
+  </body>
+</html>

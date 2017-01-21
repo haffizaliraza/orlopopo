@@ -1,0 +1,38 @@
+ 
+  
+  <div class="logo">
+    
+  </div>
+
+  <div class="login-block">
+    
+    <div >
+      <h1><%= t('.sign_in', :default => "Sign in") %></h1>
+    </div>
+    <div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f| %>
+        <div>
+           
+          <%= f.email_field :email, autofocus: true, placeholder:"username" ,id: "username" %>
+        </div>
+        <div>
+          
+          <%= f.password_field :password, autocomplete: "off",placeholder:"password",id: "password"%>
+        </div>
+
+         <div class="checkbox">
+        <% if devise_mapping.rememberable? %>
+            <%= f.label :remember_me do %>
+            <%= f.check_box :remember_me , id:"form"%> <%= t('.remember_me', :default => "Remember me") %>
+            <% end %> 
+        <% end %>
+      </div>
+
+        <%= f.submit  t('.sign_in', :default => "Sign in"), class: "login-block-button" %>
+      <% end %>
+    </div>
+  <%= render "devise/shared/links" %>
+
+
+  </div>
+  

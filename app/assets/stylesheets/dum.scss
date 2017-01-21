@@ -1,0 +1,540 @@
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+*= require devise_bootstrap_views
+ *= require_self
+ *= require font-awesome
+
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+/*!
+ * Start Bootstrap - SB Admin (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+.anglo{
+	 min-height: 380px;
+}
+body {
+    margin-top: 100px;
+    background-color: #222;
+}
+
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+}
+
+.huge {
+    font-size: 50px;
+    line-height: normal;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+
+    #page-wrapper {
+        padding: 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+ul.message-dropdown {
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+li.message-preview {
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+li.message-preview>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li.message-footer {
+    margin: 5px 0;
+}
+
+ul.alert-dropdown {
+    width: 200px;
+}
+
+/* Side Navigation */
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 51px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        overflow-y: auto;
+        background-color: #222;
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+    }
+
+    .side-nav>li>a {
+        width: 225px;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color: #000 !important;
+    }
+}
+
+.side-nav>li>ul {
+    padding: 0;
+}
+
+.side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #999;
+}
+
+.side-nav>li>ul>li>a:hover {
+    color: #fff;
+}
+
+/* Flot Chart Containers */
+
+.flot-chart {
+    display: block;
+    height: 400px;
+}
+
+.flot-chart-content {
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom Colored Panels */
+
+.huge {
+    font-size: 40px;
+}
+
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green > .panel-heading {
+    border-color: #5cb85c;
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.panel-green > a {
+    color: #5cb85c;
+}
+
+.panel-green > a:hover {
+    color: #3d8b3d;
+}
+
+.panel-red {
+    border-color: #d9534f;
+}
+
+.panel-red > .panel-heading {
+    border-color: #d9534f;
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.panel-red > a {
+    color: #d9534f;
+}
+
+.panel-red > a:hover {
+    color: #b52b27;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow > .panel-heading {
+    border-color: #f0ad4e;
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.panel-yellow > a {
+    color: #f0ad4e;
+}
+
+.panel-yellow > a:hover {
+    color: #df8a13;
+}
+
+
+.onoffswitch {
+    position: relative; width: 115px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 50px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 41px; padding: 0; line-height: 41px;
+    font-size: 19px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 13px;
+    background-color: #EEEEEE; color: #BCCC54;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 13px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 50px; margin: -4.5px;
+    background: #A1A1A1;
+    position: absolute; top: 0; bottom: 0;
+    right: 70px;
+    border: 2px solid #FFFFFF; border-radius: 50px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+    background-color: #ADE02D; 
+}
+
+
+
+/****************************
+
+Author: Luong Tran
+Date: 1st Jun 2014
+
+CSS3 RADIO BUTTONS
+SLIDER BAR
+
+*****************************/
+
+// set global fontsize in px or em. bar and label size will be affected
+$base_fontsize: 1em;
+$bar_bg_color: #fff;
+$default_hover_color:#3f4449;
+$label_text_color: #a6abb1;
+$label_highlight_color: #fff;
+$border_radius: 5px;
+$border_thickness: 2px;
+
+//functions
+@mixin appearance-none() {
+    -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+}
+@mixin border-box() {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;    
+  box-sizing: border-box; 
+}
+@function vendor($vendor) {
+  @return '-' + $vendor + '-';
+}
+
+@mixin dg-bounce($name) {
+  @-webkit-keyframes $name{ @include dg-bounce-keys(vendor('webkit')); }
+  @-moz-keyframes $name{ @include dg-bounce-keys(vendor('moz')); }
+  @-o-keyframes $name{ @include dg-bounce-keys(vendor('o')); }
+  @-ms-keyframes $name{ @include dg-bounce-keys(vendor('ms')); }
+  @keyframes $name {  @include dg-bounce-keys(''); }
+}
+@mixin dg-bounce-keys($prefix){
+    0%   {@include transformY(0 , $prefix);}
+    25%   {@include transformY(-3px, $prefix);}
+    50%   {@include transformY(0 , $prefix);}
+    100% {@include transformY(0 , $prefix);}
+}
+@mixin transformY($y, $prefix){
+  @if not ($prefix == 'all') {
+    #{$prefix + transform}: translateY($y);
+  }
+  @else {
+    #{vendor('webkit') + transform}: translateY($y);
+    #{vendor('moz') + transform}: translateY($y);
+    #{vendor('o') + transform}: translateY($y);
+    #{vendor('ms') + transform}: translateY($y);
+    transform: translateY($y);
+  }
+}
+
+@mixin mq($size) {
+  @if $size == tiny { @media only screen and (max-width: 480px) { @content; } }
+  @else if $size == small { @media only screen and (max-width: 768px) { @content; } }
+  @else if $size == medium { @media only screen and (max-width: 992px) { @content; } }
+  @else if $size == large { @media only screen and (max-width: 1440px)  { @content; } }
+}
+
+//delete as necessary
+body {padding: 2em; background: #f5f5f5;}
+
+.dgradio-sb {
+    &,.dg-label,.dg-bg  {
+        border-radius: $border_radius;
+        margin:0;
+        padding:0;
+        border:0;
+        @include border-box();
+    }
+
+    & {
+        position: relative;
+        display: block;
+        clear: both;
+        background: $bar_bg_color;
+
+        /* set global font size manually here if needed*/
+        font-size: $base_fontsize;
+
+        border: $border_thickness solid #cdd4db;
+        height: 3.25em;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        @include mq(small) { font-size: 0.875em; }
+        @include mq(tiny) { font-size: 0.8125em; }
+    }
+
+    .dg-item {
+        @include appearance-none();
+        display: none !important;
+    }
+
+    .dg-label {
+        &, .dg-bg {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: auto;
+            height: 100%;
+            font-size: 0.875em;
+            line-height: 1;
+            text-align: right;
+        }
+    
+        & {
+            cursor: pointer;
+            color: $label_highlight_color;
+            padding: 1.125em 0.5em;
+            transform-style: preserve-3d;
+            letter-spacing: 1px;
+            @include mq(small) {
+                letter-spacing: normal; 
+                word-wrap:break-word; 
+                padding: 1.125emem 0.5em 1.125em 0;
+            }
+        }
+
+        @for $i from 1 through 10 {
+            &.#{'dg'}-#{$i * 10} {width: #{$i * 10%}; z-index:#{11-$i}; }
+        }
+
+        &:nth-of-type(1) .dg-bg{background: #00e9ff;}
+        &:nth-of-type(2) .dg-bg{background: #ace527;}
+        &:nth-of-type(3) .dg-bg{background: orange;}
+        &:nth-of-type(4) .dg-bg{background: #ff6a26;}
+
+        &:before {
+            content:'';
+            position: absolute;
+            width: 0; 
+            height: 0; 
+            top: -6px;
+            bottom: 0;
+            left:auto;
+            right: -4px;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #b8c2c6;
+        }
+
+        &:after {
+            content: attr(data-caption);
+            position: absolute;
+            letter-spacing: 1px;
+            color: $default_hover_color;
+            bottom: calc(100% + 1em);
+            right: 0;
+            opacity:0;
+            transition: opacity 0.5s ease;
+            max-width: 100%;
+            @include mq(small) {letter-spacing: normal;}
+        }
+        &:before, &:hover:before{
+            transition: border 0.5s ease;
+        }
+        &:hover {
+            &:before {
+                border-top-color: $default_hover_color;
+                -webkit-animation: dg-bounce  1s infinite;
+                -moz-animation:    dg-bounce  1s infinite;
+                -o-animation:      dg-bounce  1s infinite;
+                animation:         dg-bounce  1s infinite;
+            }
+            &:after {
+                opacity:1;
+            }
+        }
+        .dg-bg {
+            width: 0;
+            z-index: -1;
+            border: 2px solid $bar_bg_color;
+        }
+    }
+    
+    .dg-item {
+        &+.dg-label {
+            &, .dg-bg {
+                transition-duration: 0.5s , 0.5s;
+                transition-timing-function: cubic-bezier(.17,.67,.5,.96);
+            }
+            & {
+                transition-property: color;
+                color: $label_highlight_color;
+            }
+            .dg-bg {
+                transition-property: width, opacity;
+                width: 100%;
+                opacity: 1;
+            }
+        }
+        &:checked {
+            ~:not(:checked)+.dg-label {
+                &, .dg-bg {
+                    transition-duration: 0.8s, 0.5s;
+                    transition-timing-function: cubic-bezier(.55,0,.63,.91);
+                }
+                & {
+                    transition-property: color;
+                    color:$label_text_color;
+                }
+                &:hover {
+                    transition: color 0.4s ease;
+                    color:$default_hover_color;
+                }
+                .dg-bg {
+                    transition-property: width, opacity;
+                    width: 0%;
+                    opacity:0;
+                }
+            }
+            +.dg-label {
+                &:before {
+                    border-top-color: $default_hover_color;
+                }
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &:hover .dg-label:not(:hover):after{
+        opacity: 0;
+    }
+}
+
+@include dg-bounce(dg-bounce); 
+
+
+
