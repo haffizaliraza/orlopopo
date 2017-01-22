@@ -21,16 +21,11 @@ development:
   <<: *default
   database: abr2
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-
-# the app. Read http://guides.rubyonrails.org/configuring.html#configuring-a-database
-# for a full rundown on how to provide these environment variables in a
-# production deployment.
-#
-# On Heroku and other platform providers, you mypassy have a full connection URL
-# available as an environment variable. For example:
-#
-#   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
-#
+production:
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: akemsoft12345m
+  socket: /var/run/mysqld/mysqld.sock
+  database: recommend
